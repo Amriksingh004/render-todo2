@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="A little space for your next big thing. A simple task-list demo.">
+  <title>Little List — One thing at a time</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header><a class="brand" href="/" aria-label="Little List home"><span class="logo" aria-hidden="true">✓</span> little list<span class="brand-dot">.</span></a><span class="connection" id="connection">Connecting…</span></header>
+    <main>
+      <div class="eyebrow">A LITTLE SPACE TO GET THINGS DONE</div>
+      <h1>One thing<br>at a <span>time.</span></h1>
+      <p class="intro">Clear your mind. Make a list. Start somewhere.</p>
+      <section class="board" aria-label="Your task list">
+        <div class="board-heading"><h2>Your little list</h2><span id="count" aria-live="polite">Loading…</span></div>
+        <form id="task-form">
+          <label class="sr-only" for="task-input">New task</label>
+          <input id="task-input" name="title" placeholder="What’s your next small step?" maxlength="120" required autocomplete="off">
+          <button type="submit" id="add-button">Add task <span aria-hidden="true">＋</span></button>
+        </form>
+        <div class="filters" role="group" aria-label="Filter tasks"><button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="active" aria-pressed="false">To do</button><button type="button" data-filter="done" aria-pressed="false">Done</button></div>
+        <p id="error" role="alert" hidden></p>
+        <ul id="task-list" aria-label="Tasks"></ul>
+        <div id="empty" hidden><div class="empty-icon" aria-hidden="true">✓</div><h3>A little room for possibility.</h3><p>Add your first task above. You’ve got this.</p></div>
+        <div class="board-footer"><span id="progress-label">One small step is a good start.</span><button type="button" id="refresh">Refresh list ↻</button></div>
+      </section>
+      <p class="demo-note">Shared demo · Everyone sees the same list.<br>Tasks reset when the server restarts. Use sample data.</p>
+    </main>
+    <footer><span>Less noise. More doing.</span><span>Made for small wins <span aria-hidden="true">✳</span></span></footer>
+  </div>
+</body>
+</html>
